@@ -12,8 +12,8 @@ public class Main {
         final int k = 16;
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
-        Random re = new Random(5);
-        r = new Random(str.charAt(re.nextInt(str.length())));
+        Random re = new Random(str.charAt(0) % 9 + str.charAt(1) % 2 + str.charAt(3) % 5 + str.charAt(7) % 3);
+        r = new Random(re.nextInt());
         for(int i = 0; i < k; i++) {
             try {
                 if(re.nextBoolean()) {
@@ -30,10 +30,11 @@ public class Main {
                 e.getCause();
             }
         }
-        /*
+/*
         Outputer o = new Outputer();
-        o.start();
-        */
+        o.start();*/
+
+
         Checker ch = new Checker();
         ch.start();
     }
